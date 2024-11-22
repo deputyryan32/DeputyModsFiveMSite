@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeputyMods FiveM</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/anti-inspect.js" defer></script>
+</head>
+<body>
+    <div class="terminal">
+        <h1>Welcome to DeputyMods FiveM</h1>
+        <p>Your go-to place for FREE FiveM mods and scripts.</p>
+        <button id="loginButton" class="btn">Login with FiveM</button>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', () => {
+            const username = prompt("Enter your FiveM Username:");
+            if (username) {
+                localStorage.setItem('fivemUsername', username);
+                window.location.href = 'scripts.html';
+            }
+        });
+    </script>
+</body>
+</html>
